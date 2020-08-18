@@ -1,12 +1,7 @@
 import React, { useState } from "react";
-import { ThemeProvider, createMuiTheme, makeStyles } from "@material-ui/core";
-import { red, blue } from "@material-ui/core/colors";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core";
+
 import Home from "./pages/Home";
-
-
-const useStyles = makeStyles({
-  root: {},
-});
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -22,7 +17,7 @@ function App() {
       },
       background: {
         default: darkMode ? "#232323" : "#FFF",
-        dark: darkMode ? "#181818" : "#f4f6f8",
+        dark: darkMode ? "#181818" : "#F9F9F9",
         paper: darkMode ? "#232323" : "#FFF",
       },
     },
