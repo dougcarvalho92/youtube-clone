@@ -4,7 +4,7 @@ const drawerWidth = 240;
 const useStyles = makeStyles(({ open, ...theme }) => ({
   drawerToolbar: {
     position: "fixed",
-    backgroundColor: "#fff",
+    backgroundColor: theme.palette.background.dark,
     zIndex: theme.zIndex.drawer + 1,
     borderBottom: "1px solid #eee",
     width: drawerWidth,

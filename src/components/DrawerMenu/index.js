@@ -30,15 +30,7 @@ import LogoLight from "../../assets/icons/light.svg";
 function DrawerMenu({ open, handleChange }) {
   const classes = useStyles(open);
   const theme = useTheme();
-  const toggleDrawer = (open) => (event) => {
-    if (
-      event &&
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-
+  const toggleDrawer = () => {
     handleChange();
   };
   return (
@@ -49,7 +41,6 @@ function DrawerMenu({ open, handleChange }) {
           paper: classes.drawerPaper,
         }}
         variant={open ? "persistent" : "temporary"}
-
         anchor={"left"}
         open={open}
         onClose={() => handleChange()}
